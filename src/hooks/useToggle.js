@@ -1,13 +1,16 @@
-import { useState } from 'react'
+// Import Library's Hook
+import { useState } from "react";
 
 const useToggle = (defaultValue) => {
-    const [value, setValue] = useState(defaultValue)
-    const toggleValue = (value) => {
-        setValue(currentValue =>
-            typeof value === "boolean" ? value : !currentValue
-        )
-    }
-    return [value, toggleValue]
-}
+   const [value, setValue] = useState(defaultValue);
 
-export default useToggle
+   const toggleValue = (value) => {
+      setValue((currentValue) =>
+         typeof value === "boolean" ? value : !currentValue
+      );
+   };
+
+   return [value, toggleValue];
+};
+
+export default useToggle;
